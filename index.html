@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIGMA LAND</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+      .landing_section {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        
+        /* background-image: url(./landing_background.png); */
+      }
+      .background_image {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: -10;
+      }
+
+      .navbar {
+        margin: 0 auto;
+        color: black;
+        width: 75vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 15px;
+      }
+      .nav_list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        justify-items: center;
+      }
+      .nav_list > ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+      }
+      .nav_list > ul > * {
+        font-weight: 400;
+        padding: 10px 0;
+        font-size: 15px;
+        line-height: 28px;
+        letter-spacing: 0.2px;
+        color: white;
+      }
+      .logo > img {
+        width: 186px;
+        height: 56px;
+      }
+      .social > * {
+        width: 33.31px;
+        height: 27px;
+      }
+      .hero_section{
+        width: 55%;
+        height: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        align-items: center;
+        color: white;
+
+      }
+      .hero_section :nth-child(1){
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+      .hero_section span{
+        display: block;
+      }
+      .hero_section h1{
+        text-align: center;
+        font-weight: 700;
+        font-size: 74px;
+        line-height: 84px;
+        letter-spacing: 0.2px;
+
+      }
+      .hero_section p{
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: 0.2px;
+        text-align: center;
+      }
+      .hero_section> button{
+        padding: 12px 40px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        line-height: 20px;
+        background-color:#2091F9;
+        color: white;
+        text-align: center;
+        border-radius: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="landing_section">
+      <img class="background_image" src="./landing_background.png" alt="" />
+      <div class="navbar">
+        <div class="nav_list">
+          <ul>
+            <li>Home</li>
+            <li>Product</li>
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+          <div class="logo">
+            <img
+              src="Rectangle 4.svg"
+              class="img-fluid rounded-top"
+              alt="figma land logo"
+            />
+          </div>
+        </div>
+
+        <div class="social">
+          <img src="./Vector.svg" alt="twiter logo" />
+          <img src="./facebook.svg" alt="facebook logo" />
+          <img src="./linkden.svg" alt="linkden logo" />
+        </div>
+      </div>
+      <div class="hero_section">
+        <div>
+          <h1>The best products <span> start with Figma</span></h1>
+          <p>
+            Most calendars are designed for teams. Slate is designed  <span>for
+            freelancers</span>
+          </p>
+        </div>
+        <button>Try For Free</button>
+      </div>
+    </section>
+  </body>
+</html>
