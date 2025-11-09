@@ -17,6 +17,7 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         /* background-image: url(./landing_background.png); */
       }
       .background_image {
@@ -105,72 +106,19 @@
         color: white;
         text-align: center;
         border-radius: 150px;
+        outline: 0;
       }
-      .service_section {
-        width: 100vw;
-        margin-top: 80px;
-        /* height: 100vh; */
-        display: flex;
-        flex-direction: column;
-        gap: 80px;
-        justify-content: space-between;
-        align-items: center;
+
+      .service_section{
+        
       }
-      .desc {
+      .desc{
         width: 75vw;
         display: flex;
         flex-direction: column;
+        margin: 0 auto;
         justify-content: center;
         align-items: center;
-        gap: 7px;
-      }
-      .desc h2 {
-        font-weight: 400;
-        font-size: 48px;
-        line-height: 55px;
-        letter-spacing: 0.2px;
-        color: #252b42;
-      }
-      .desc p {
-        padding: 10px;
-        font-weight: 400;
-        font-size: 28px;
-        line-height: 40px;
-        letter-spacing: 0.2px;
-        text-align: center;
-        color: #252b42;
-      }
-      .desc p span {
-        display: block;
-      }
-
-      .service {
-        display: flex;
-        gap: 52px;
-        max-width: 60%;
-      }
-      .features {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        /* justify-content: space-between; */
-        align-items: center;
-        text-align: center;
-      }
-      .features h3 {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 28px;
-        letter-spacing: 0.1px;
-        color: #252b42;
-      }
-      .features p {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 25px;
-        letter-spacing: 0.2px;
-        text-align: center;
-        color: #374754;
       }
     </style>
   </head>
@@ -212,47 +160,6 @@
         <button>Try For Free</button>
       </div>
     </section>
-    <section class="service_section">
-      <div class="desc">
-        <h2>Features</h2>
-        <p>
-          Most calendars are designed for teams.
-          <span> Slate is designed for freelancers</span>
-        </p>
-      </div>
-      <div class="service">
-        <div class="first_feature features">
-          <div class="service_logo">
-            <img src="./circle_service.svg" alt="" />
-          </div>
-          <h3>OpenType features Variable fonts</h3>
-          <p>
-            Slate helps you see how many more days you need to work to reach
-            your financial goal.
-          </p>
-        </div>
-        <div class="second_feature features">
-          <div class="service_logo">
-            <img src="./pencil_service.svg" alt="" />
-          </div>
-          <h3>Design with real data</h3>
-          <p>
-            Slate helps you see how many more days you need to work to reach
-            your financial goal.
-          </p>
-        </div>
-        <div class="third_feature features">
-          <div class="service_logo">
-            <img src="./paint_service.svg" alt="" />
-          </div>
-          <h3>Fastest way to take action</h3>
-          <p>
-            Slate helps you see how many more days you need to work to reach
-            your financial goal.
-          </p>
-        </div>
-      </div>
-      <div class="service_vedio"></div>
-    </section>
+   
   </body>
 </html>
