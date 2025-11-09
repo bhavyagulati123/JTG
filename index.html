@@ -172,6 +172,53 @@
         text-align: center;
         color: #374754;
       }
+      .service_video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 80px;
+      }
+
+      .video-container {
+        position: relative;
+        display: inline-block;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .video-container video {
+        width: 640px;
+        height: 360px;
+        border-radius: 15px;
+        cursor: pointer;
+        display: block;
+      }
+
+      .play-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 50%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+      }
+
+      .play-overlay img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .play-overlay.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
     </style>
   </head>
   <body>
@@ -252,7 +299,48 @@
           </p>
         </div>
       </div>
-      <div class="service_vedio"></div>
+      <div class="service_video">
+        <div class="video-container">
+          <video id="myVideo" width="640" height="360" poster="./thumbnail.jpg">
+            <source src="./sample.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="play-overlay" id="playOverlay">
+            <img src="./play-icon.svg" alt="Play Icon" />
+          </div>
+        </div>
+      </div>
     </section>
+    <script>
+      const video = document.getElementById("myVideo");
+      const playOverlay = document.getElementById("playOverlay");
+
+      // Toggle play/pause on video click
+      video.addEventListener("click", () => {
+        if (video.paused) {
+          video.play();
+          playOverlay.classList.add("hidden");
+        } else {
+          video.pause();
+          playOverlay.classList.remove("hidden");
+        }
+      });
+
+      // Also toggle play/pause when overlay is clicked
+      playOverlay.addEventListener("click", () => {
+        if (video.paused) {
+          video.play();
+          playOverlay.classList.add("hidden");
+        } else {
+          video.pause();
+          playOverlay.classList.remove("hidden");
+        }
+      });
+
+      // When video ends, show play icon again
+      video.addEventListener("ended", () => {
+        playOverlay.classList.remove("hidden");
+      });
+    </script>
   </body>
 </html>
